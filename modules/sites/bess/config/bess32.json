@@ -1,0 +1,37 @@
+{
+    "name"      : "acsocket",
+    "url"       : "http://ipebessadei.ipe.kit.edu/adei-battery",
+    "server"    : "bess32-ac-sock",
+    "database"  : "Bess32_AC_SocketData",
+    "sensors"   : {
+        "Batt": [
+            {"sensor": "soc_batt_act", "order": 0},
+            {"sensor": "u_batt_act", "order": 1}
+        ],
+        "DCACBatt": [
+            {"sensor": "p_dc_dcacbatt_target_is", "order": 2}
+        ],
+        "Grid": [
+            {"sensor": "e_active_to_grid_act", "order": 3},
+            {"sensor": "e_active_from_grid_act", "order": 4},
+            {"sensor": "e_active_to_grid_virtual_act", "order": 5},
+            {"sensor": "e_active_from_grid_virtual_act", "order": 6}
+        ],
+        "GridBatt": [
+            {"sensor": "p_ac_batt_act", "order": 7},
+            {"sensor": "e_active_to_grid_batt_act", "order": 8},
+            {"sensor": "e_active_from_grid_batt_act", "order": 9}
+        ],
+        "GridPV": [
+            {"sensor": "e_active_to_grid_pv_act", "order": 10}
+        ],
+        "GridPVSim": [
+            {"sensor": "pv_input_type", "order": 11},
+            {"sensor": "factor_pv_virtual", "order": 12},
+            {"sensor": "p_ac_pv_virtual_act", "order": 13},
+            {"sensor": "p_ac_grid_virtual_act", "order": 14},
+            {"sensor": "e_active_to_grid_pv_virtual_act", "order": 15}
+        ]
+    }
+}
+

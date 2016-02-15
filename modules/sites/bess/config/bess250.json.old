@@ -1,0 +1,35 @@
+{
+    "name"      : "bess250",
+    "url"       : "http://ipebessadei.ipe.kit.edu/adei-battery",
+    "server"    : "battery",
+    "database"  : "Bess250",
+    "sensors": {
+      "allgemein_500": [
+            {"sensor": "i_dcbus_pv_act", "order": 0 },
+            {"sensor": "p_dcbus_pv_act", "order": 1},
+            {"sensor": "u_dcbus_pv_act", "order": 2},
+            {"sensor": "e_pv_act", "order": 3},
+            {"sensor": "e_to_batt_act", "order": 4},
+            {"sensor": "e_from_batt_act", "order": 5},
+            {"sensor": "e_into_grid_act", "order": 6},
+            {"sensor": "e_from_grid_act", "order": 7},
+            {"sensor": "p_dcbus_dcdc1_act", "order": 8},
+            {"sensor": "p_dcbus_dcdc2_act", "order": 9},
+            {"sensor": "temp_ambient_act", "order": 10},
+            {"sensor": "temp_pv_module_act", "order": 11}
+        ],
+        "ALM_500": [
+            {"sensor": "p_ac_dcac_act", "order": 12}
+        ],
+        "Gewerk1_500": [
+            {"sensor": "soc_batt_act", "order": 13},
+            {"sensor": "u_batt_act", "order": 14}
+        ],
+        "Gewerk2_500": [
+            {"sensor": "soc_batt_act", "order": 15},
+            {"sensor": "u_batt_act", "order": 16}
+        ]
+    }
+}
+
+

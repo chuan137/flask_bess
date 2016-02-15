@@ -1,0 +1,13 @@
+{
+    "name"      : "pvcn1000",
+    "url"       : "http://ipebessadei.ipe.kit.edu/adei-battery",
+    "server"    : "pvcn1000",
+    "database"  : "PVCN_1MW",
+    "sensors"   : {
+        "5A_30_15e_037": [
+            {"sensor": "u_dc", "order": 0},
+            {"sensor": "p_dc", "order": 1}
+        ]
+    }
+}
+
