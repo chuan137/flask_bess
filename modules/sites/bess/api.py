@@ -32,7 +32,7 @@ def sensor_list(conf):
 
 def output_html(data, code, headers=None):
     if type(data) is list:
-        data = " ".join(data)
+        data = ", ".join(data)
     resp = Response(data, mimetype='text/html', headers=headers)
     resp.status_code = code
     return resp
@@ -74,7 +74,7 @@ class BessApi(Resource):
         for s in ordered:
             r = data.get(s['sensor']) or 'nan'
             data_list.append(r)
-        data_list = ['%.3f,'%float(f)  for f in data_list]
+        data_list = ['%.3f'%float(f)  for f in data_list]
 
         # return output_html(data_list, 200)
         return data
