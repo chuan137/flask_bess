@@ -30,6 +30,13 @@ def sensor_list(conf):
     conf = open_config(conf)
     return {k:[_.get('sensor') for _ in v] for k,v in conf.get('sensors').iteritems()}
 
+def output_html(data, code, headers=None):
+    if type(data) is list:
+        data = " ".join(data)
+    resp = Response(data, mimetype='text/html', headers=headers)
+    resp.status_code = code
+    return resp
+
 
 adeireader_obj = {s : init_adei(s) for s in configurations}
 sensors = {s: sensor_list(s)  for s in configurations}
@@ -41,29 +48,21 @@ if 0:
     _g = _adei.query_group('allgemein_500')
     print map(_g.get, ['e_from_batt_act'])
     print _adei.query_data('allgemein_500', ['e_from_batt_act'] )
-    # print map(_g.get, ['p_ac_batt_act', 'e_active_to_grid_batt_act',
-                       # 'e_active_from_grid_batt_act'])
-    # print _adei.query_data('GridBatt', [13, 0, 1])
 
-
-def output_html(data, code, headers=None):
-    if type(data) is list:
-        data = " ".join(data)
-    resp = Response(data, mimetype='text/html', headers=headers)
-    resp.status_code = code
-    return resp
 
 class BessApi(Resource):
 
     def get(self, conf=None):
 
         # test if configuration defined
-        if conf not in adeireader_obj:
-            return output_html("wrong query", 404)
-
-        adei = adeireader_obj.get(conf)
-        sns = sensors.get(conf)
-        ordered = sensors_ordered.get(conf)
+        try:
+            adei = adeireader_obj[conf]
+            sns = sensors[conf]
+            ordered = sensors_ordered[conf]
+        except KeyError:
+            confs = ""
+            for i in configurations: confs += '/%s' % i
+            return output_html("Wrong query: possible configurations are %s" % confs, 404)
 
         data = {}
         for grp, sns_list in sns.iteritems():
