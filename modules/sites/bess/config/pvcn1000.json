@@ -1,5 +1,5 @@
-{
-    "name"      : "pvcn1000",
+[
+  {
     "url"       : "http://ipebessadei.ipe.kit.edu/adei-battery",
     "server"    : "pvcn1000",
     "database"  : "PVCN_1MW",
@@ -9,5 +9,15 @@
             {"sensor": "p_dc", "order": 1}
         ]
     }
-}
-
+  },
+  {
+    "url"       : "http://ipebessadei.ipe.kit.edu/adei-battery",
+    "server"    : "pvcn1000",
+    "database"  : "PVCN_CALC",
+    "sensors"   : {
+        "Calc_1d": [
+            {"sensor": "e_day", "order": 2}
+        ]
+    }
+  }
+]
