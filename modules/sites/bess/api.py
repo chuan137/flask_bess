@@ -5,7 +5,7 @@ import os, json
 import copy
 from operator import itemgetter
 
-configurations = ['bess32', 'bess250', 'pvcn1000']
+configurations = ['bess32', 'bess250', 'pvcn1000', 'ulm']
 
 def open_config(conf):
     cdir = os.path.dirname(__file__)

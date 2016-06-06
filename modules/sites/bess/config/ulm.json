@@ -1,0 +1,24 @@
+{
+    "name"      : "ulm",
+    "url"       : "http://ipebessadei.ipe.kit.edu/adei-battery",
+    "server"    : "hiu",
+    "database"  : "HIU_Speicher",
+    "sensors"   : {
+        "Visuals": [
+          {"sensor": "soc_batt_vis", "order": 0},
+          {"sensor": "u_batt_vis", "order": 1},
+          {"sensor": "p_ac_batt_vis", "order": 2},
+          {"sensor": "e_batt_chg_day_vis", "order": 3},
+          {"sensor": "e_batt_dis_day_vis", "order": 4},
+          {"sensor": "p_ac_pv_vis", "order": 5},
+          {"sensor": "e_pv_day_vis", "order": 6},
+          {"sensor": "p_ac_ev_station_vis", "order": 7},
+          {"sensor": "e_ev_station_day_vis", "order": 8},
+          {"sensor": "p_ac_grid_vis", "order": 9},
+          {"sensor": "e_grid_day_vis", "order": 10},
+          {"sensor": "p_ac_hiu_vis", "order": 11},
+          {"sensor": "e_hiu_day_vis", "order": 12}
+      ]
+  }
+}
+
