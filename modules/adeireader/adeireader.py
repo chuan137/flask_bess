@@ -3,7 +3,7 @@
 import numpy
 from adeihelper import query_csv, query_xml, adei_timestamp, print_exc
 
-DEBUG = 0
+DEBUG = 1
 
 
 class AdeiError(Exception):

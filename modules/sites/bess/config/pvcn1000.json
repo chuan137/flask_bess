@@ -1,7 +1,7 @@
 [
   {
     "url"       : "http://ipebessadei.ipe.kit.edu/adei-battery",
-    "server"    : "pvcn1000_NEW",
+    "server"    : "pvcn1000",
     "database"  : "PVCN_1MW",
     "sensors"   : {
         "5A_30_15e_037": [
@@ -12,7 +12,7 @@
   },
   {
     "url"       : "http://ipebessadei.ipe.kit.edu/adei-battery",
-    "server"    : "pvcn1000_NEW",
+    "server"    : "pvcn1000",
     "database"  : "PVCN_CALC",
     "sensors"   : {
         "Calc_1d": [
